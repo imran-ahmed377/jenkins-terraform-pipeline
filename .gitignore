@@ -1,0 +1,28 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Variable files (keep secrets out of git)
+*.tfvars
+*.tfvars.json
+
+# AWS credentials and sensitive files
+*accessKeys*.csv
+*credentials*.csv
+*Admin*.txt
+*password*.txt
+Jankins ID and AWS secret/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
