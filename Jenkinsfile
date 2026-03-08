@@ -68,17 +68,6 @@ pipeline {
       }
     }
 
-    stage('Manual Approval (Apply Only)') {
-      when {
-        expression { params.ACTION == 'apply' }
-      }
-      steps {
-        timeout(time: 20, unit: 'MINUTES') {
-          input message: 'Approve Terraform apply to create infrastructure?', ok: 'Approve Apply'
-        }
-      }
-    }
-
     stage('Terraform Apply/Destroy') {
       steps {
         dir('terraform') {
